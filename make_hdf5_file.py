@@ -10,4 +10,5 @@ print(outfile.dtype)
 
 f = h5py.File('TF.hdf5', 'w')
 group = f.create_group('MyGroup')
-dset = group.create_dataset('FT', data = outfile, dtype = 'd')
+subgroup = group.create_group('MySubGroup')
+dset = subgroup.create_dataset('FT', data = outfile, dtype = 'd')
