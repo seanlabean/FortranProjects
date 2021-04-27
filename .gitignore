@@ -33,3 +33,6 @@
 
 # Emacs buffers
 *~
+
+# Other binary files
+*hdf5
