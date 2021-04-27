@@ -15,8 +15,8 @@ FC      = /sw/arch/RedHatEnterpriseServer7/EB_production/2019/software/OpenMPI/3
 
 FORTRANLIB=-I$(HDF5)/include $(HDF5)/lib/libhdf5_fortran.a
 
-FSOURCE = read_file hello_world # fileexample
-OBJECTS = read_file.o hello_world.o # file_example.o
+FSOURCE = read_file hello_world read_arepo
+OBJECTS = read_file.o hello_world.o read_arepo.0 
 
 FLAGS   = -c  
 LIBSHDF   = $(FORTRANLIB) $(HDF5)/lib/libhdf5.a 
@@ -28,6 +28,8 @@ read_file: read_file.f90
 	$(FC) -o $@ read_file.f90 $(LIBSHDF) $(LIB)
 hello_world: hello_world.f90
 	$(FC) -o $@ hello_world.f90 $(LIBSHDF) $(LIB)
+read_arepo: read_arepo.f90
+	$(FC) -o $@ read_arepo.f90 $(LIBSHDF) $(LIB)
 
 clean:
 	rm -f $(FSOURCE) $(OBJECTS) *.h5
