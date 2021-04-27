@@ -58,6 +58,12 @@ CALL h5dread_f(dset_id, H5T_NATIVE_DOUBLE, dset_data, data_dims, error)
 print *, 'Data points (0,0), (0,1), (0,2): ', dset_data(0,0), dset_data(0,1), dset_data(0,2)
 print *, 'Data points (1,0), (1,1), (1,2): ', dset_data(1,0), dset_data(1,1), dset_data(1,2)
 
+print*, 'printing (1,1) (2,1) (3,1) ', dset_data(1,1),dset_data(2,1),dset_data(3,1)
+print*, 'printing (1,2) (2,2) (3,2) ', dset_data(1,2),dset_data(2,2),dset_data(3,2)
+print*, 'printing (1,3) (2,3) (3,3) ', dset_data(1,3),dset_data(2,3),dset_data(3,3)
+
+!print*,dset_data
+
 CALL h5gclose_f(group1_id,error)
 CALL h5fclose_f(file_id,error)
 CALL h5close_f(error)

@@ -60,6 +60,10 @@ ALLOCATE(dset_data(cols, rows))
 print*, 'Reading data...'
 CALL h5dread_f(dset_id, H5T_NATIVE_DOUBLE, dset_data, data_dims, error)
 print *, dset_data
+print*, 'test printing...'
+print*, 'printing 0.0 0.0 ', dset_data(1,1),dset_data(2,1)
+print*, 'printing 1.0 1.0 ', dset_data(1,2),dset_data(2,2)
+print*, 'printing 2.0 2.0 ', dset_data(1,3),dset_data(2,3)
 
 CALL h5gclose_f(group2_id,error)
 CALL h5gclose_f(group1_id,error)
