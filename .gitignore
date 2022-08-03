@@ -36,3 +36,4 @@
 
 # Other binary files
 *hdf5
+!voramr_test.hdf5
